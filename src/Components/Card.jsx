@@ -50,9 +50,9 @@ const Card = ({ item }) => {
         </Link>
         <button onClick={addFav} className="absolute top-4 right-4">
           {isFavorited ? (
-            <AiFillHeart className="text-3xl text-red-500"/>
+            <AiFillHeart className="text-3xl text-red-500 hover:scale-105"/>
           ) : (
-            <AiOutlineHeart className="text-3xl text-red-500"/>
+            <AiOutlineHeart className="text-3xl text-red-500 hover:scale-105"/>
           )}
        
         </button>

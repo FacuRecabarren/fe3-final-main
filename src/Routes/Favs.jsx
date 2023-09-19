@@ -18,9 +18,14 @@ const Favs = () => {
         </div>
       </div>
       <div className="py-10 flex justify-center items-center flex-wrap gap-10">
-        {storage ? storage.map((doctorFav) => (
+        {storage && storage.length > 0 ? storage.map((doctorFav) => (
           <Card key={doctorFav} item={doctorFav}/>
-        )) : ""}
+        )) : 
+          <div className="flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-bold text-red-600">¡No se encontró ningún odontólogo!</h2>
+            <img src="https://res.cloudinary.com/dreso9ye9/image/upload/v1695084158/2618d173-c624-454a-a7c7-710e12f14b38_jdakd1.png" alt=""/>
+          </div>
+        }
       </div>
     </div>
   );
